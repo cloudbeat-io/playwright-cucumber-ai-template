@@ -1,0 +1,44 @@
+{
+  "name": "playwright-cucumber-ai-template",
+  "version": "1.0.0",
+  "description": "CucumberJS + Playwright (TypeScript) UI test boilerplate with AI-agent skills for recording scenarios and running manual test cases, ready for CloudBeat",
+  "private": true,
+  "scripts": {
+    "test": "cucumber-js",
+    "test:saucedemo": "cucumber-js features/saucedemo",
+    "test:smoke": "cucumber-js --tags @smoke",
+    "typecheck": "tsc --noEmit",
+    "record": "mkdir -p recordings && playwright codegen --target javascript --output recordings/codegen.js",
+    "pw-cli": "playwright-cli",
+    "cloudbeat:set-url": "node scripts/cloudbeat-set-url.mjs"
+  },
+  "keywords": [
+    "cucumber",
+    "playwright",
+    "bdd",
+    "test-automation",
+    "cloudbeat",
+    "claude-code",
+    "kiro"
+  ],
+  "author": {
+    "name": "CBNR Cloud Solutions LTD (CloudBeat)",
+    "email": "info@cloudbeat.io",
+    "url": "https://cloudbeat.io"
+  },
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "@cloudbeat/cli": "5.0.0",
+    "@cucumber/cucumber": "^12.1.0",
+    "@playwright/cli": "0.1.22",
+    "@playwright/test": "1.57.0",
+    "@types/node": "^22.20.1",
+    "playwright": "1.57.0",
+    "tsx": "^4.21.0",
+    "typescript": "^5.7.0"
+  },
+  "dependencies": {
+    "@cloudbeat/cucumber": "^3.2.2",
+    "@cloudbeat/types": "^1.0.8"
+  }
+}

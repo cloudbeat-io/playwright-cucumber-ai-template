@@ -1,0 +1,15 @@
+node_modules/
+reports/
+# Keep project skills and commands shared; ignore the rest of .claude/ (local settings, etc.)
+.claude/*
+!.claude/skills/
+!.claude/commands/
+!.claude/settings.json
+# Playwright CLI output (may contain credentials)
+.playwright-cli/
+# Raw browser recordings (scratch input for new scenarios)
+recordings/
+# Manual test runs and CloudBeat run reports (may contain test data)
+test-results/
+.DS_Store
+*.zip
